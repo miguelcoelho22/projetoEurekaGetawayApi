@@ -24,8 +24,8 @@ public class CepService implements CepInterface {
     }
 
     @Override
-    public ResponseEntity<CepResponseDTO> buscaCepByEndereco(String localidade, String logradouro, String uf) {
-        return restTemplate.getForEntity(API_KEY + localidade + "/" + logradouro + "/" + uf + FINAL_API_KEY, CepResponseDTO.class);
+    public ResponseEntity<CepResponseDTO[]> buscaCepByEndereco(String localidade, String logradouro, String uf) {
+        return restTemplate.getForEntity(API_KEY + localidade + "/" + logradouro + "/" + uf + FINAL_API_KEY, CepResponseDTO[].class);
     }
 
 }

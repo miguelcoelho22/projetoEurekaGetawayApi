@@ -7,5 +7,5 @@ public interface CepInterface {
 
     ResponseEntity<CepResponseDTO> buscaCep(String cep);
 
-    ResponseEntity<CepResponseDTO> buscaCepByEndereco(String localidade, String logradouro, String uf);
+    ResponseEntity<CepResponseDTO[]> buscaCepByEndereco(String localidade, String logradouro, String uf);
 }
